@@ -61,20 +61,20 @@ h1, h2, h3, h4, h5, h6, .display-4, .offcanvas-title {
     color: var(--text-primary);
 }
 
-.display-4 { font-size: var(--fs-hero); font-weight: 700; }
+.display-4 { font-size: var(--fs-hero); font-weight: 700; }/* Using display-4 for hero headline (bootstrap*/
 h1 { font-size: var(--fs-h1); font-weight: 700; }
 h2 { font-size: var(--fs-h2); font-weight: 600; }
 h3 { font-size: var(--fs-h3); font-weight: 600; }
 
 /* NAVBAR DESIGN */
-.navbar {
+.navbar {/* Using glassmorphism-inspired styling for a frosted effect(bootstrap) */
     background-color: var(--bg-deep) !important;
     height: 68px;
     border-bottom: 1px solid rgba(186, 212, 245, 0.12) !important;
     backdrop-filter: blur(12px) !important;
 }
 
-.navbar-brand {
+.navbar-brand {/* Using Playfair Display for a luxurious, elegant feel(bootstrap) */
     font-family: 'Playfair Display', serif;
     color: var(--text-inverse) !important;
     font-style: italic;
@@ -87,7 +87,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     font-size: 1.1rem;
 }
 
-.nav-link {
+.nav-link {/* Using uppercase, letter-spacing, and a muted color for a refined, modern navigation style(bootstrap) */
     font-family: 'DM Sans', sans-serif;
     color: var(--text-muted) !important;
     text-transform: uppercase;
@@ -96,7 +96,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     transition: all 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover, .nav-link.active {/* Adding a subtle text-shadow on hover and active states for a frosty glow effect(bootstrap) */
     color: var(--text-inverse) !important;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
@@ -180,7 +180,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     text-transform: capitalize;
 }
 
-.btn-outline-primary.category-btn {
+.btn-outline-primary.category-btn {/* Using outline variant for category filters to create a cohesive, elegant look(bootstrap) */
     border-color: var(--border);
 }
 
@@ -190,7 +190,7 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     color: var(--text-primary);
 }
 
-.category-btn.active, .btn-outline-primary.category-btn.active {
+.category-btn.active, .btn-outline-primary.category-btn.active {/* Active state for category filters with a solid accent background(bootstrap) */
     background-color: var(--accent-primary) !important;
     color: var(--text-inverse) !important;
     border-color: var(--accent-primary) !important;
@@ -888,4 +888,4 @@ body.luxury-dark-theme {
 
 .remove-item-btn:hover { color: #dc3545 !important; }
 
-/*bootstrap added*/
+/*bootstrap added and modified*/
