@@ -35,8 +35,8 @@ $featuredProduct = !empty($products) ? $products[0] : null;
 
     <nav class="navbar navbar-expand-lg sticky-top p-3 boreal-navbar">
         <div class="container-fluid px-lg-5">
-            <a class="navbar-brand text-uppercase fw-bold fs-3 tracking-wide text-dark boreal-brand" href="#">
-                <i class="bi bi-asterisk me-2"></i>BOREAL
+            <a class="navbar-brand text-uppercase fw-bold fs-3 tracking-wide text-dark boreal-brand" href="index.php">
+                <i class="bi bi-asterisk me-2 brand-snow"></i>BOREAL
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#borealNav"
@@ -46,18 +46,17 @@ $featuredProduct = !empty($products) ? $products[0] : null;
 
             <div class="collapse navbar-collapse justify-content-center" id="borealNav">
                 <ul class="navbar-nav gap-4">
-                    <li class="nav-item"><a class="nav-link text-dark text-uppercase fs-7 tracking-wider" href="#">New
-                            Arrivals</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark text-uppercase fs-7 tracking-wider"
-                            href="#">Coats & Jackets</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark text-uppercase fs-7 tracking-wider"
-                            href="#">Knitwear</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark text-uppercase fs-7 tracking-wider"
-                            href="#">Footwear</a></li>
-                    <li class="nav-item"><a class="nav-link text-dark text-uppercase fs-7 tracking-wider"
-                            href="#">Accessories</a></li>
-                    <li class="nav-item"><a class="nav-link text-danger text-uppercase fs-7 tracking-wider"
-                            href="#">Sale</a></li>
+
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-7 tracking-wider filter-link" href="#"
+                            data-category="Coats & Jackets">Coats & Jackets</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-7 tracking-wider filter-link" href="#"
+                            data-category="Knitwear">Knitwear</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-7 tracking-wider filter-link" href="#"
+                            data-category="Footwear">Footwear</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-7 tracking-wider filter-link" href="#"
+                            data-category="Accessories">Accessories</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase fs-7 tracking-wider filter-link" href="#"
+                            data-category="Sale">Sale</a></li>
                 </ul>
             </div>
 
@@ -149,7 +148,8 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                             </div>
                             <div class="floating-product-info text-dark">
                                 <p class="text-uppercase tracking-wider fs-8 mb-1 text-accent">
-                                    <?php echo $featuredProduct['category']; ?></p>
+                                    <?php echo $featuredProduct['category']; ?>
+                                </p>
                                 <h4 class="font-playfair fs-5 mb-2"><?php echo $featuredProduct['name']; ?></h4>
                                 <div class="d-flex align-items-center justify-content-between mb-3">
                                     <div
@@ -161,7 +161,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                                             class="btn btn-link text-dark text-decoration-none p-0 px-2 fw-bold hero-qty-plus">+</button>
                                     </div>
                                     <p class="font-mono fs-4 text-dark mb-0">
-                                        $<?php echo number_format($featuredProduct['price'], 2); ?></p>
+                                        ₹<?php echo number_format($featuredProduct['price'], 2); ?></p>
                                 </div>
                                 <button
                                     class="btn btn-dark rounded-0 w-100 py-2 text-uppercase fs-7 fw-bold add-to-cart-btn"
@@ -261,7 +261,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                                     </h5>
                                     <div class="d-flex justify-content-between align-items-center mt-3">
                                         <p class="card-text text-dark font-mono fs-5 mb-0">
-                                            $<?php echo number_format($product['price'], 2); ?></p>
+                                            ₹<?php echo number_format($product['price'], 2); ?></p>
                                         <div class="color-swatches d-flex gap-1">
                                             <span class="swatch bg-dark border border-secondary rounded-circle d-block"
                                                 style="width:12px; height:12px;"></span>
@@ -320,7 +320,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
             <div class="row g-5 mb-5 pb-4 border-bottom">
                 <div class="col-lg-4 pe-lg-5">
                     <a class="text-decoration-none text-uppercase fw-bold fs-3 tracking-wide text-dark mb-4 d-block"
-                        href="#">
+                        href="index.php">
                         BOREAL
                     </a>
                     <p class="text-secondary text-start pe-lg-4 fs-7 mb-4">
@@ -344,16 +344,20 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                     <h6 class="text-dark text-uppercase tracking-wider fs-7 mb-4">Shop</h6>
                     <ul class="list-unstyled d-flex flex-column gap-3">
                         <li><a href="#"
-                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest">New
+                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest filter-link"
+                                data-category="All">New
                                 Arrivals</a></li>
                         <li><a href="#"
-                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest">Coats</a>
+                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest filter-link"
+                                data-category="Coats & Jackets">Coats</a>
                         </li>
                         <li><a href="#"
-                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest">Knitwear</a>
+                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest filter-link"
+                                data-category="Knitwear">Knitwear</a>
                         </li>
                         <li><a href="#"
-                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest">Sale</a>
+                                class="text-secondary text-decoration-none hover-dark fs-7 text-uppercase tracking-widest filter-link"
+                                data-category="Sale">Sale</a>
                         </li>
                     </ul>
                 </div>
@@ -399,9 +403,9 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                 <p class="text-secondary fs-8 mb-3 mb-md-0 text-uppercase tracking-widest">© 2026 BOREAL. All
                     Rights Reserved.</p>
                 <div class="d-flex gap-4">
-                    <a href="#" class="text-dark hover-accent"><i class="bi bi-instagram fs-5"></i></a>
-                    <a href="#" class="text-dark hover-accent"><i class="bi bi-twitter-x fs-5"></i></a>
-                    <a href="#" class="text-dark hover-accent"><i class="bi bi-tiktok fs-5"></i></a>
+                    <a href="https://instagram.com/boreal" target="_blank" class="text-dark hover-accent"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="https://twitter.com/boreal" target="_blank" class="text-dark hover-accent"><i class="bi bi-twitter-x fs-5"></i></a>
+                    <a href="https://tiktok.com/@boreal" target="_blank" class="text-dark hover-accent"><i class="bi bi-tiktok fs-5"></i></a>
                 </div>
             </div>
         </div>
@@ -415,8 +419,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                 Your Collection <span class="badge bg-accent rounded-pill fs-7 ms-2 text-white"
                     id="cart-count-title">0</span>
             </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
 
         <div class="offcanvas-body p-0 d-flex flex-column h-100 position-relative">
@@ -428,7 +431,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
             <div class="cart-footer mt-auto p-4 bg-light border-top">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <span class="fs-6 text-uppercase tracking-wider text-secondary">Subtotal</span>
-                    <span class="fs-4 font-mono text-dark fw-bold" id="cart-total">$0.00</span>
+                    <span class="fs-4 font-mono text-dark fw-bold" id="cart-total">₹0.00</span>
                 </div>
                 <div class="d-grid gap-3">
                     <a href="checkout.php"
@@ -442,29 +445,35 @@ $featuredProduct = !empty($products) ? $products[0] : null;
     </div>
 
     <!-- Product Detail Modal -->
-    <div class="modal fade product-detail-modal" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+    <div class="modal fade product-detail-modal" id="productDetailModal" tabindex="-1"
+        aria-labelledby="productDetailModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content border-0 rounded-0 overflow-hidden">
-                <button type="button" class="btn-close position-absolute top-0 end-0 m-4 z-3 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-4 z-3 shadow-none"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
                 <div class="modal-body p-0">
                     <div class="row g-0">
                         <!-- Left Panel: Images -->
                         <div class="col-lg-7 bg-light overflow-hidden position-relative product-modal-images">
-                            <div class="main-image-container position-relative h-100 d-flex align-items-center justify-content-center py-5">
+                            <div
+                                class="main-image-container position-relative h-100 d-flex align-items-center justify-content-center py-5">
                                 <img id="modalProductImage" src="" alt="Product Image" class="img-fluid main-modal-img">
                                 <!-- Featured Badge handled via JS -->
-                                <span id="modalBadge" class="badge position-absolute top-0 start-0 m-4 rounded-0 tracking-wider d-none"></span>
+                                <span id="modalBadge"
+                                    class="badge position-absolute top-0 start-0 m-4 rounded-0 tracking-wider d-none"></span>
                             </div>
-                            <div class="thumbnail-strip d-flex gap-2 p-3 position-absolute bottom-0 w-100 justify-content-center bg-overlay-subtle">
+                            <div
+                                class="thumbnail-strip d-flex gap-2 p-3 position-absolute bottom-0 w-100 justify-content-center bg-overlay-subtle">
                                 <!-- Thumbnails injected via JS -->
                             </div>
                         </div>
-                        
+
                         <!-- Right Panel: Info -->
-                        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column h-100" style="max-height: 90vh; overflow-y: auto;">
+                        <div class="col-lg-5 p-4 p-md-5 d-flex flex-column h-100"
+                            style="max-height: 90vh; overflow-y: auto;">
                             <div class="brand-label text-accent text-uppercase fs-8 tracking-widest mb-2">BOREAL</div>
                             <h2 id="modalProductName" class="font-playfair display-6 mb-3"></h2>
-                            
+
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="rating text-dark fs-7">
                                     <i class="bi bi-star-fill text-accent-warm"></i>
@@ -476,7 +485,8 @@ $featuredProduct = !empty($products) ? $products[0] : null;
 
                             <div class="price-row mb-4">
                                 <h3 id="modalProductPrice" class="font-mono fs-3 mb-0"></h3>
-                                <p id="modalSalePrice" class="text-secondary text-decoration-line-through fs-6 mb-0 d-none"></p>
+                                <p id="modalSalePrice"
+                                    class="text-secondary text-decoration-line-through fs-6 mb-0 d-none"></p>
                             </div>
 
                             <div class="description-wrap mb-4">
@@ -485,7 +495,8 @@ $featuredProduct = !empty($products) ? $products[0] : null;
 
                             <!-- Color Selector -->
                             <div id="modalColorSelector" class="mb-4">
-                                <label class="text-dark text-uppercase tracking-wider fs-8 mb-3 d-block fw-bold">Select Color: <span id="selectedColorName" class="text-secondary fw-normal"></span></label>
+                                <label class="text-dark text-uppercase tracking-wider fs-8 mb-3 d-block fw-bold">Select
+                                    Color: <span id="selectedColorName" class="text-secondary fw-normal"></span></label>
                                 <div id="colorSwatches" class="d-flex gap-2 flex-wrap">
                                     <!-- Colors injected via JS -->
                                 </div>
@@ -494,8 +505,12 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                             <!-- Size Selector -->
                             <div class="mb-4">
                                 <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <label class="text-dark text-uppercase tracking-wider fs-8 d-block fw-bold mb-0">Select Size</label>
-                                    <button class="btn btn-link p-0 text-accent text-decoration-none fs-8 text-uppercase tracking-wider" id="sizeGuideBtn">Size Guide</button>
+                                    <label
+                                        class="text-dark text-uppercase tracking-wider fs-8 d-block fw-bold mb-0">Select
+                                        Size</label>
+                                    <button
+                                        class="btn btn-link p-0 text-accent text-decoration-none fs-8 text-uppercase tracking-wider"
+                                        id="sizeGuideBtn">Size Guide</button>
                                 </div>
                                 <div id="sizeSelector" class="d-flex gap-2 flex-wrap">
                                     <button class="size-pill" data-size="XS">XS</button>
@@ -505,7 +520,8 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                                     <button class="size-pill" data-size="XL">XL</button>
                                     <button class="size-pill" data-size="XXL">XXL</button>
                                 </div>
-                                <div id="sizeError" class="text-danger fs-8 mt-2 d-none">Please select a size to continue.</div>
+                                <div id="sizeError" class="text-danger fs-8 mt-2 d-none">Please select a size to
+                                    continue.</div>
                             </div>
 
                             <!-- Qty and Add to Cart -->
@@ -513,27 +529,36 @@ $featuredProduct = !empty($products) ? $products[0] : null;
                                 <div class="d-flex gap-3 align-items-center mb-4">
                                     <div class="qty-stepper d-flex align-items-center border">
                                         <button class="qty-minus border-0 bg-transparent px-3 py-2">-</button>
-                                        <input type="number" id="modalQty" value="1" min="1" max="10" class="border-0 bg-transparent text-center fw-bold" style="width: 50px;" readonly>
+                                        <input type="number" id="modalQty" value="1" min="1" max="10"
+                                            class="border-0 bg-transparent text-center fw-bold" style="width: 50px;"
+                                            readonly>
                                         <button class="qty-plus border-0 bg-transparent px-3 py-2">+</button>
                                     </div>
-                                    <button id="modalAddToCartBtn" class="btn btn-dark rounded-0 flex-grow-1 py-3 text-uppercase tracking-widest fw-bold fs-7">Add to Cart</button>
+                                    <button id="modalAddToCartBtn"
+                                        class="btn btn-dark rounded-0 flex-grow-1 py-3 text-uppercase tracking-widest fw-bold fs-7">Add
+                                        to Cart</button>
                                 </div>
-                                
-                                <button class="btn btn-outline-dark rounded-0 w-100 py-3 text-uppercase tracking-widest fw-bold fs-7 mb-4 modal-wishlist-btn"><i class="bi bi-heart me-2"></i> Add to Wishlist</button>
+
+                                <button
+                                    class="btn btn-outline-dark rounded-0 w-100 py-3 text-uppercase tracking-widest fw-bold fs-7 mb-4 modal-wishlist-btn"><i
+                                        class="bi bi-heart me-2"></i> Add to Wishlist</button>
 
                                 <!-- Trust Badges -->
                                 <div class="row g-0 pt-4 border-top">
                                     <div class="col-4 text-center">
                                         <i class="bi bi-truck fs-5 mb-1 d-block"></i>
-                                        <span class="fs-9 text-uppercase tracking-wider text-secondary">Free Shipping</span>
+                                        <span class="fs-9 text-uppercase tracking-wider text-secondary">Free
+                                            Shipping</span>
                                     </div>
                                     <div class="col-4 text-center">
                                         <i class="bi bi-arrow-return-left fs-5 mb-1 d-block"></i>
-                                        <span class="fs-9 text-uppercase tracking-wider text-secondary">30-Day Returns</span>
+                                        <span class="fs-9 text-uppercase tracking-wider text-secondary">30-Day
+                                            Returns</span>
                                     </div>
                                     <div class="col-4 text-center">
                                         <i class="bi bi-shield-check fs-5 mb-1 d-block"></i>
-                                        <span class="fs-9 text-uppercase tracking-wider text-secondary">Authenticity</span>
+                                        <span
+                                            class="fs-9 text-uppercase tracking-wider text-secondary">Authenticity</span>
                                     </div>
                                 </div>
                             </div>
@@ -551,7 +576,7 @@ $featuredProduct = !empty($products) ? $products[0] : null;
     <script src="assets/js/cart.js?v=2"></script>
     <script src="assets/js/search-filter.js?v=2"></script>
     <script src="assets/js/product-detail.js?v=2"></script>
-    
+
     <!-- Wishlist Toast -->
     <div id="wishlist-toast" class="wishlist-toast">
         <i class="bi bi-heart-fill me-2"></i> Item added to wishlist
