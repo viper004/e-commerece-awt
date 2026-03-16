@@ -4,7 +4,7 @@ $(document).ready(function () {
     const $searchInput = $('#search-input');
     const $categoryBtns = $('.category-btn');
 
-    // Debounced Search Handler
+    // Handle search input with debounce
     $searchInput.on('input', debounce(function () {
         const term = $(this).val().trim();
 
