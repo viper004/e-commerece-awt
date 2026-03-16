@@ -56,7 +56,10 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, .display-4, .offcanvas-title {
+h1, h2, h3, h4, h5, h6, .display-4, .offcanvas-title {/* - .display-4 → Bootstrap’s large hero heading style.
+- .offcanvas-title → Title styling inside Bootstrap’s offcanvas component.
+- Headings (h1, h2, h3) → Bootstrap provides default sizes; you override them.
+(bootstrap) */
     font-family: 'Playfair Display', serif;
     color: var(--text-primary);
 }
@@ -64,7 +67,7 @@ h1, h2, h3, h4, h5, h6, .display-4, .offcanvas-title {
 .display-4 { font-size: var(--fs-hero); font-weight: 700; }/* Using display-4 for hero headline (bootstrap*/
 h1 { font-size: var(--fs-h1); font-weight: 700; }
 h2 { font-size: var(--fs-h2); font-weight: 600; }
-h3 { font-size: var(--fs-h3); font-weight: 600; }
+h3 { font-size: var(--fs-h3); font-weight: 600; }/* Using h1, h2, h3 for product titles and section headings (bootstrap) */
 
 /* NAVBAR DESIGN */
 .navbar {/* Using glassmorphism-inspired styling for a frosted effect(bootstrap) */
@@ -72,14 +75,18 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     height: 68px;
     border-bottom: 1px solid rgba(186, 212, 245, 0.12) !important;
     backdrop-filter: blur(12px) !important;
-}
+}/* .navbar → Bootstrap’s core navigation bar, used as the base structure. 
+   Here it is customized with a frosted glassmorphism effect, deep background color, 
+   and blur filter to create a modern luxury look. */
 
 .navbar-brand {/* Using Playfair Display for a luxurious, elegant feel(bootstrap) */
     font-family: 'Playfair Display', serif;
     color: var(--text-inverse) !important;
     font-style: italic;
     letter-spacing: -0.5px;
-}
+}/* .navbar-brand → Bootstrap’s branding/logo area inside the navbar. 
+   In this code, it is overridden to use Playfair Display font with italic styling 
+   for an elegant, high-end brand identity. */
 
 .brand-snow {
     color: var(--accent-warm);
@@ -94,12 +101,17 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     font-size: 0.78rem;
     letter-spacing: 1.5px;
     transition: all 0.3s ease;
-}
+}/* .nav-link → Bootstrap’s navigation link styling. 
+   Overridden here with uppercase text, letter-spacing, and muted colors. 
+   Hover and active states add a frosty glow effect for refined navigation. */
 
 .nav-link:hover, .nav-link.active {/* Adding a subtle text-shadow on hover and active states for a frosty glow effect(bootstrap) */
     color: var(--text-inverse) !important;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
+}/* .nav-link:hover, .nav-link.active → Bootstrap’s navigation link states. 
+   By default, Bootstrap changes link color on hover/active. 
+   Here they are overridden to switch to inverse white text and add a subtle frosty text-shadow glow, 
+   giving the navbar an elegant icy highlight effect when hovered or selected. */
 
 .cart-icon {
     color: var(--text-inverse);
@@ -146,7 +158,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     height: 52px;
     border: none;
     box-shadow: none;
-}
+}/* .form-control → Bootstrap’s input field styling. 
+   Overridden here with pill-shaped radius, frosted backgrounds, and custom focus shadows 
+   for the search bar. */
 
 .search-bar .form-control:focus {
     box-shadow: 0 0 0 3px rgba(186,212,245,0.4);
@@ -157,7 +171,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     background: var(--bg-surface);
     border: none;
     padding-left: 1.25rem;
-}
+}/* .input-group-text → Bootstrap’s input group addon styling. 
+   Used in the search bar, customized with rounded pill edges and clean background 
+   to integrate seamlessly with the frosted input design. */
 
 .search-bar .form-control {
     border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
@@ -182,7 +198,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
 
 .btn-outline-primary.category-btn {/* Using outline variant for category filters to create a cohesive, elegant look(bootstrap) */
     border-color: var(--border);
-}
+}/* .btn-outline-primary → Bootstrap’s outline button variant. 
+   Used for category filters, then customized with icy borders and hover states 
+   to match the frosted theme. */
 
 .category-btn:hover {
     border-color: var(--accent-soft);
@@ -207,7 +225,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     display: flex;
     flex-direction: column;
     overflow: hidden;
-}
+}/* .product-card → Based on Bootstrap’s card component. 
+   Extended with rounded corners, frosted shadows, hover lift animations, 
+   and category badges for product listings. */
 
 .product-card:hover {
     transform: translateY(-6px);
@@ -255,7 +275,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
+}/* .product-body → Bootstrap card body section. 
+   Customized with flexible layout, Playfair Display titles, and DM Sans descriptions 
+   for product details. */
 
 .product-title {
     font-family: 'Playfair Display', serif;
@@ -301,7 +323,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     padding-top: 12px !important;
     border-top: 1px solid var(--border);
     margin-top: auto;
-}
+}/* .product-footer → Bootstrap card footer section. 
+   Styled with borders, spacing, and integrated Add-to-Cart buttons. */
 
 .btn-cart {
     width: 100%;
@@ -321,7 +344,8 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     align-items: center;
     justify-content: center;
     gap: 8px;
-}
+}/* .btn-cart → Custom button built on Bootstrap’s button system. 
+   Styled with accent colors, pill radius, and hover animations for the Add-to-Cart action. */
 
 .btn-cart:hover:not(:disabled) {
     background-color: var(--accent-hover) !important;
@@ -480,7 +504,9 @@ h3 { font-size: var(--fs-h3); font-weight: 600; }
     border: none !important;
     transition: background 0.2s;
     width: 100%;
-}
+}/* .btn-checkout → Custom checkout button extending Bootstrap’s button base. 
+   Designed with bold accent colors, larger height, and strong hover states 
+   to emphasize the primary purchase action. */
 
 .btn-checkout:hover {
     background-color: var(--accent-hover) !important;
