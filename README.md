@@ -10,5 +10,3 @@ This is a comprehensive e-commerce application built using PHP, CSS, and JavaScr
 - **Checkout Process**: A streamlined process for users to complete their purchases.
 - **Responsive Design**: The application is optimized for various devices and screen sizes using CSS.
 
-## Installation
-1. Clone the repository:
