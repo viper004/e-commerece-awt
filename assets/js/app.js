@@ -167,7 +167,7 @@ function loadProducts(category = '') {
 }
 
 /**
- * Render products into the grid
+ * Display products into the grid
  * @param {Array} products 
  */
 function renderProducts(products) {
